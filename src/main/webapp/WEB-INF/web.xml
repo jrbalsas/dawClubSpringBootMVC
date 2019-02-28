@@ -6,10 +6,16 @@
          version="3.0">
     <session-config>
         <session-timeout>
-            30
+            30 <!-- Time in minutes to expire after the last request -->
         </session-timeout>
+        <cookie-config>
+                <http-only>true</http-only> <!-- Prevent client side scripting from accessing/manipulating session cookie. -->
+                <secure>false</secure> <!-- true to force send over TLS connection -->
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode> <!-- This disables URL rewriting. -->
     </session-config>
     <!-- Creation of Datasource in Application Server -->
+<!--
     <data-source>
             <name>java:global/jdbc/gestClub</name>
             <class-name>org.apache.derby.jdbc.ClientConnectionPoolDataSource</class-name>        
@@ -22,7 +28,7 @@
             <max-pool-size>10</max-pool-size>
             <min-pool-size>5</min-pool-size>
     </data-source>
-    
+-->    
     <!-- Realm Access Rules -->
     <!--  Remove comments to enable authentication&authorizatio -->        
 <!--

@@ -32,7 +32,7 @@ public class ClienteDAOJDBC implements ClienteDAO {
 
     private final Logger logger = Logger.getLogger(ClienteDAOJDBC.class.getName());
 
-    @Autowired(required = false)
+    @Autowired (required = false) //Avoid init error whether not DataSource defined in application.properties
     private DataSource ds;
 
     public ClienteDAOJDBC() {
