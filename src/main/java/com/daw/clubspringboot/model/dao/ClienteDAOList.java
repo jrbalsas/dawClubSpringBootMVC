@@ -1,7 +1,6 @@
 package com.daw.clubspringboot.model.dao;
 
 import com.daw.clubspringboot.model.Cliente;
-import com.daw.clubspringboot.model.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Repository;

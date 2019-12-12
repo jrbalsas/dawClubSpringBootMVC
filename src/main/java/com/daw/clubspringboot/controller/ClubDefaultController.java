@@ -11,11 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ClubDefaultController {
 
-        //JSP default page
-        @GetMapping("/")
-	public String inicio () {
-		return "index";
-	}
 	@GetMapping("/logout")
 	public String logout (HttpSession session ) {
             session.invalidate();

@@ -6,16 +6,15 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class DawClubSpringBootMvcApplication extends SpringBootServletInitializer{
+public class DawClubSpringBootMvcApplication extends SpringBootServletInitializer {
 
-     @Override
+    @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(DawClubSpringBootMvcApplication.class);
     }
 
-    
-	public static void main(String[] args) {
-		SpringApplication.run(DawClubSpringBootMvcApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DawClubSpringBootMvcApplication.class, args);
+    }
 
 }

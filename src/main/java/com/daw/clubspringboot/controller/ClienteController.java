@@ -40,10 +40,6 @@ public class ClienteController {
     public ClienteController() {
     }
     
-// Not necessary using Autowired
-//    public void setClienteDAO(ClienteDAO clienteDAO) {
-//        this.clienteDAO=clienteDAO;
-//    }
     
 @ModelAttribute
 private void configView(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
