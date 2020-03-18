@@ -1,17 +1,27 @@
 package com.daw.clubspringboot.model;
 
-import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-//import org.hibernate.validator.constraints.NotEmpty;
 
-public class Cliente {
-    private int id;
-    @NotEmpty
-    @Size(min=5,max=50, message = "La longitud ${validatedValue} debe estar entre {min} y {max} caracteres")
+
+@Entity
+public class Cliente implements Serializable{
+
+    @Id         //JPA annotations
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Size(min = 4, max = 25, message = "La longitud ${validatedValue} debe estar entre {min} y {max} caracteres")
     private String nombre;
-    @Pattern(regexp="\\d{7,8}(-?[a-zA-Z])?", message = "{cliente.dni.formato}")
+    
+    @Pattern(regexp = "\\d{7,8}(-?[a-zA-Z])?", message = "{cliente.dni.formato}")
     private String dni;
+    
     private boolean socio;
     private int medioPago;
 
@@ -23,12 +33,12 @@ public class Cliente {
         medioPago=0;
     }
     
-    public Cliente(int id, String nombre, String dni, boolean socio,int medioPago) {
+    public Cliente(Integer id, String nombre, String dni, boolean socio) {
         this.id=id;
         this.nombre=nombre;
         this.dni=dni;
         this.socio=socio;
-        this.medioPago=medioPago;
+        this.medioPago=0;
     }
 
     /**Copy constructor*/
@@ -43,14 +53,14 @@ public class Cliente {
     /**
      * @return the id
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     /**
