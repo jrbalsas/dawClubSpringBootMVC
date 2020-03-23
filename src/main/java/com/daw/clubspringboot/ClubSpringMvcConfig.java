@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
+/** Configure SpringMVC
  *
  * @author jrbalsas
  */
@@ -19,16 +19,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class ClubSpringMvcConfig implements WebMvcConfigurer {
 
     @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        //Enable direct access to Web Pages resources
-        configurer.enable();
-    }
-
-    @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         //Define routes to simple views
         registry.addViewController("/login").setViewName("login");
-        registry.addViewController("/").setViewName("forward:/index.jsp");
+        registry.addViewController("/").setViewName("redirect:/index.jsp");
 //        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 
     }
