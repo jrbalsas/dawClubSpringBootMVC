@@ -18,6 +18,8 @@ Features:
 - SpringMVC Default controller for static routing and logout
 - SpringBoot custom error pages
 - Webjar dependencies for BootStrap CSS integration
+- JEE Access control rules in web.xml
+- JEE Security API Authentication
 
 ## Requeriments
 
@@ -32,7 +34,6 @@ Features:
 3. Select JPA DAOs implementation in controller
 4. Optional: edit sample data on `src/main/resources`
 
-### Realm Authentication/Authorization:
-1. Create Realm in JEE Application Server, e.g. using AS GUI/asadmin tool
-2. Uncomment/Create Security-constraints in web.xml
-3. Select valid realm in web.xml
+### JEE Authentication/Authorization:
+1. Uncomment/Create Security-constraints in web.xml
+2. Configure JEE Security API identity store in JEESecurityConfig class3. Select valid realm in web.xml

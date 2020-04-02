@@ -23,7 +23,7 @@
         </nav>
         <section class="col-md-9">
         <h2>Identificación de usuario</h2>
-        <c:if test="${param.error}">
+        <c:if test="${param.error eq null}">
             <p class="alert alert-danger">Credenciales incorrectas</p>
         </c:if>
         <form action="j_security_check" method="POST">

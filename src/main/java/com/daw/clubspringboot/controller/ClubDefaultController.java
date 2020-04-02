@@ -1,6 +1,7 @@
 package com.daw.clubspringboot.controller;
 
-import javax.servlet.http.HttpSession;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -12,9 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ClubDefaultController {
 
 	@GetMapping("/logout")
-	public String logout (HttpSession session ) {
-            session.invalidate();
+	public String logout (HttpServletRequest request ) throws ServletException {
+            request.logout();
+            request.getSession().invalidate();
             return "redirect:/";
-	}
-        
+	}        
 }
