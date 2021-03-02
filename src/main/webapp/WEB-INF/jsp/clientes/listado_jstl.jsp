@@ -13,10 +13,10 @@
             <nav class="col-md-3">
                 <h2>Opciones</h2>
 
-                <ul class=" nav nav-pills nav-stacked">
+                <ul class=" nav nav-pills flex-column">
                     <li><%@include file="/WEB-INF/layout/logoutBt.jspf" %></li>
 
-                    <li class="active"><a href='<c:url value="/clientes/crea"/>'>Nuevo Cliente</a></li>
+                    <li class="nav-item"><a href='<c:url value="/clientes/crea"/>' class="nav-link">Nuevo Cliente</a></li>
                 </ul>
             </nav>
             <section class="col-md-9">
@@ -36,9 +36,9 @@
                                 <td>${c.nombre}</td><td>${c.dni}</td>
                                 <td>${c.socio?"Sí":"No"}</td>
                                 <td>${mediosPago[c.medioPago]}</td>
-                                <td><a class='btn btn-default' href='${ctrlUrl}/visualiza${qry}'>Ver</a>&nbsp;
-                                    <a class='btn btn-default' href='${ctrlUrl}/edita${qry}'>Editar</a>&nbsp;
-                                    <a class='btn btn-default' href='${ctrlUrl}/borra${qry}'>Borrar</a>&nbsp;
+                                <td><a class='btn btn-light btn-sm' href='${ctrlUrl}/visualiza${qry}'>Ver</a>&nbsp;
+                                    <a class='btn btn-light btn-sm' href='${ctrlUrl}/edita${qry}'>Editar</a>&nbsp;
+                                    <a class='btn btn-light btn-sm' href='${ctrlUrl}/borra${qry}'>&#x1f5d1;</a>&nbsp;
                                 </td>
                             </tr>
                         </c:forEach>

@@ -13,20 +13,23 @@
         <main class="row">
         <nav class="col-md-3">
             <h2>Opciones</h2>
-            <ul class=" nav nav-pills nav-stacked">
-                <li><%@include file="/WEB-INF/layout/logoutBt.jspf" %></li>
-                <li ><a href="listado" >Volver</a></li>
+            <ul class=" nav nav-pills flex-column">
+                <li class="nav-item"><%@include file="/WEB-INF/layout/logoutBt.jspf" %></li>
+                <li class="nav-item"><a href="listado" >Volver</a></li>
             </ul>
         </nav>        
-            <section>
+            <section class="col-md-6">
         <h1>Editar Cliente</h1>
-        <form:form method="POST" modelAttribute="cliente" cssClass="well col-md-4">
+        <form:form method="POST" modelAttribute="cliente" cssClass="well">
             <h3>Cliente nº: ${cliente.id}</h3>
             <form:label path="nombre" >Nombre:</form:label><form:input class='form-control' path="nombre" />
             <div><form:errors cssClass="form-text text-danger" path="nombre"/></div>
             <form:label path="dni">DNI:</form:label><form:input path="dni" cssClass="form-control"/>
             <div><form:errors cssClass="form-text text-danger" path="dni"/></div>
-        <form:label path="socio">Socio:</form:label><form:checkbox path="socio" cssClass="form-control"/>
+        <div class="form-check  my-3">
+            <form:checkbox path="socio" cssClass="form-check-input" id="iSocio"/>
+            <form:label path="socio" cssClass="form-check-label" for="iSocio">Socio</form:label>
+        </div>
         <form:label path="medioPago">Medio Pago:</form:label>
             <form:select path="medioPago" cssClass="form-control">
                 <c:forEach var="medio" items="${mediosPago}" varStatus="elemento">

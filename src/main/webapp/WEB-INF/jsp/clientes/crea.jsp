@@ -13,13 +13,13 @@
                 <main class="row">
         <nav class="col-md-3">
             <h2>Opciones</h2>
-            <ul class=" nav nav-pills nav-stacked">
-                <li><%@include file="/WEB-INF/layout/logoutBt.jspf" %></li>
-                <li ><a href="listado">Volver</a></li>
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><%@include file="/WEB-INF/layout/logoutBt.jspf" %></li>
+                <li class="nav-item"><a class="nav-link" href="listado">Volver</a></li>
                 
             </ul>
         </nav>
-        <section class="col-md-4">
+        <section class="col-md-6">
         <h1>Alta Cliente</h1>
         <form:errors path="cliente.*" cssClass="text-danger" element="div" />
         <form:form method="POST" class="well" modelAttribute="cliente" >
@@ -27,7 +27,10 @@
             <div><form:errors cssClass="form-text text-danger" path="nombre"/></div>
             <form:label path="dni">DNI:</form:label><form:input class='form-control' path="dni" />
             <div><form:errors cssClass="form-text text-danger" path="dni"/></div>
-            <form:label path="socio">Socio:</form:label><form:checkbox class='form-control' path="socio"/>
+            <div class="form-check my-3">
+                <form:checkbox path="socio" cssClass="form-check-input" id="iSocio"/>
+                <form:label path="socio" cssClass="form-check-label" for="iSocio">Socio</form:label>
+            </div>
             <form:label path="medioPago">Medio Pago</form:label>
             <form:select path="medioPago" class="form-control">
                 <c:forEach var="medio" items="${mediosPago}" varStatus="elemento">

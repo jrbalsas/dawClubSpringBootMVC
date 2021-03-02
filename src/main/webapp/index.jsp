@@ -15,10 +15,10 @@
         <main class="row" >
         <nav class="col-md-3">
         <h2>Opciones</h2>
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="<c:url value="/clientes"/>" >Gestión clientes</a></li>
-            <li class="disabled"><a href="instalaciones" >Gestión instalaciones</a></li>
-            <li class="disabled"><a href="servicios" >Gestión servicios</a></li>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item active"><a href="<c:url value="/clientes"/>" class="nav-link">Gestión clientes</a></li>
+            <li class="nav-item disabled"><a href="instalaciones" class="nav-link disabled" >Gestión instalaciones</a></li>
+            <li class="nav-item disabled"><a href="servicios" class="nav-link disabled" >Gestión servicios</a></li>
         </ul>
         </nav>
         <section class="col-md-9">
