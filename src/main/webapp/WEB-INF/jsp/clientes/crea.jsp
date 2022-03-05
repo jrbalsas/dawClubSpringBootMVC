@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -23,7 +24,7 @@
         <h1>Alta Cliente</h1>
         <form:errors path="cliente.*" cssClass="text-danger" element="div" />
         <form:form method="POST" class="well" modelAttribute="cliente" >
-            <form:label path="nombre" ></form:label>Nombre:<form:input class='form-control' path="nombre" />
+            <form:label path="nombre" >Nombre:</form:label><form:input class='form-control' path="nombre" />
             <div><form:errors cssClass="form-text text-danger" path="nombre"/></div>
             <form:label path="dni">DNI:</form:label><form:input class='form-control' path="dni" />
             <div><form:errors cssClass="form-text text-danger" path="dni"/></div>
@@ -37,7 +38,12 @@
                     <form:option value="${elemento.index}"  label="${medio}" />
                 </c:forEach>    
             </form:select>
-            
+            <div class="mb-3">
+                <label>Fecha Nacimiento:</label>
+                    <form:input path="fechaNacimiento" type="date"
+                                class="form-control ${status.error?'is-invalid':''}" />
+                    <form:errors cssClass='invalid-feedback' path="fechaNacimiento" />
+            </div>
             <p>            
                 <input name="enviar" type="Submit" value="Guardar" class="btn btn-primary">
                 <input name="enviar" type="reset" value="Limpiar" class="btn btn-default">

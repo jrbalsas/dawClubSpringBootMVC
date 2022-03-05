@@ -1,6 +1,9 @@
 package com.daw.clubspringboot.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,6 +28,8 @@ public class Cliente implements Serializable{
     private boolean socio;
     private int medioPago;
 
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private LocalDate fechaNacimiento;
 
     public Cliente () {
         id=0;
@@ -39,6 +44,7 @@ public class Cliente implements Serializable{
         this.dni=dni;
         this.socio=socio;
         this.medioPago=0;
+        this.fechaNacimiento=null;
     }
 
     /**Copy constructor*/
@@ -48,6 +54,7 @@ public class Cliente implements Serializable{
         this.dni=c.dni;
         this.socio=c.socio;
         this.medioPago=c.medioPago;
+        this.fechaNacimiento=c.fechaNacimiento;
     }
     
     /**
@@ -112,5 +119,12 @@ public class Cliente implements Serializable{
     public void setMedioPago(int medioPago) {
         this.medioPago = medioPago;
     }
-    
+
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
 }

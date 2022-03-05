@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
             <section class="col-md-6">
         <h1>Editar Cliente</h1>
         <form:form method="POST" modelAttribute="cliente" cssClass="well">
-            <h3>Cliente nº: ${cliente.id}</h3>
+            <h3>Cliente nÂº: ${cliente.id}</h3>
             <form:label path="nombre" >Nombre:</form:label><form:input class='form-control' path="nombre" />
             <div><form:errors cssClass="form-text text-danger" path="nombre"/></div>
             <form:label path="dni">DNI:</form:label><form:input path="dni" cssClass="form-control"/>
@@ -36,11 +37,16 @@
                     <form:option value="${elemento.index}"  label="${medio}" />
                 </c:forEach>    
             </form:select>
-        
+        <div class="mb-3">
+            <label>Fecha Nacimiento:</label>
+            <form:input path="fechaNacimiento" type="date"
+                        class="form-control ${status.error?'is-invalid':''}" />
+            <form:errors cssClass='invalid-feedback' path="fechaNacimiento" />
+        </div>
         <p>
-        <input class="btn btn-primary" name="enviar" type="Submit" value="Guardar">
-        <input class="btn btn-default" name="enviar" type="Reset" value="Limpiar">
-        <a class="btn btn-default" href="listado">Volver</a>
+            <input class="btn btn-primary" name="enviar" type="Submit" value="Guardar">
+            <input class="btn btn-default" name="enviar" type="Reset" value="Limpiar">
+            <a class="btn btn-default" href="listado">Volver</a>
         </p>
         </form:form>
             </section>

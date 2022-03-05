@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -34,7 +35,7 @@
                             <tr>
                                 <td>${c.id}</td>
                                 <td>${c.nombre}</td><td>${c.dni}</td>
-                                <td>${c.socio?"Sí":"No"}</td>
+                                <td>${c.socio?"SÃ­":"No"}</td>
                                 <td>${mediosPago[c.medioPago]}</td>
                                 <td><a class='btn btn-light btn-sm' href='${ctrlUrl}/visualiza${qry}'>Ver</a>&nbsp;
                                     <a class='btn btn-light btn-sm' href='${ctrlUrl}/edita${qry}'>Editar</a>&nbsp;

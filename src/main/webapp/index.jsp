@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <fmt:setBundle basename="messages"/>
@@ -16,9 +17,9 @@
         <nav class="col-md-3">
         <h2>Opciones</h2>
         <ul class="nav nav-pills flex-column">
-            <li class="nav-item active"><a href="<c:url value="/clientes"/>" class="nav-link">Gestión clientes</a></li>
-            <li class="nav-item disabled"><a href="instalaciones" class="nav-link disabled" >Gestión instalaciones</a></li>
-            <li class="nav-item disabled"><a href="servicios" class="nav-link disabled" >Gestión servicios</a></li>
+            <li class="nav-item active"><a href="<c:url value="/clientes"/>" class="nav-link">GestiÃ³n clientes</a></li>
+            <li class="nav-item disabled"><a href="instalaciones" class="nav-link disabled" >GestiÃ³n instalaciones</a></li>
+            <li class="nav-item disabled"><a href="servicios" class="nav-link disabled" >GestiÃ³n servicios</a></li>
         </ul>
         </nav>
         <section class="col-md-9">
