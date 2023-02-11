@@ -10,12 +10,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * @author jrbalsas
  */
 @SpringBootApplication
-public class DawClubSpringBootMvcApplication extends SpringBootServletInitializer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(DawClubSpringBootMvcApplication.class);
-    }
+public class DawClubSpringBootMvcApplication  {
 
     public static void main(String[] args) {
         SpringApplication.run(DawClubSpringBootMvcApplication.class, args);
