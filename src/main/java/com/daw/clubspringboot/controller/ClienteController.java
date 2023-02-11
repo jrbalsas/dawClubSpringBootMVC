@@ -5,9 +5,9 @@ import com.daw.clubspringboot.model.dao.ClienteDAO;
 import com.daw.clubspringboot.model.dao.MedioPagoDAO;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -53,6 +53,7 @@ private void configView(HttpServletRequest request, HttpServletResponse response
 public String listado(ModelMap model) {
         List<Cliente> clientes=clienteDAO.buscaTodos();
         model.addAttribute("clientes", clientes);
+        logger.info("Listando clientes");
         return "clientes/listado_jstl";
 }
 
@@ -74,7 +75,7 @@ public String visualizaId(@PathVariable Integer id, ModelMap model ) {
 public String borra(@RequestParam(value="id",defaultValue="0")Integer id, ModelMap model) {
         clienteDAO.borra(id);
         model.clear();
-        return "redirect:.";
+        return "redirect:/clientes";
 }
 
 @GetMapping("/crea")

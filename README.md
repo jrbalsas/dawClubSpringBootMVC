@@ -1,7 +1,7 @@
 dawClub using SpringMVC & SpringBoot
 ==========
 
-Sample Maven Netbeans project with CRUD Web App using SpringMVC & SpringBoot
+Sample Maven project with CRUD Web App using SpringMVC & SpringBoot
 
 Features:
 -------------
@@ -23,10 +23,10 @@ Features:
 
 ## Requeriments
 
-- JEE Application Server, i.e. Payara, Glassfish
+- Jakarta 10 Application Server, i.e. Payara, Glassfish
 
 ## Usage
-- Compile and deploy in a JEE Application Server
+- Compile and deploy in a Jakarta EE Application Server
 
 ### DB Access:
 1. Configure JEE Datasource in web.xml
