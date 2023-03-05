@@ -19,7 +19,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.2</version>
+        <version>3.0.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -27,12 +27,9 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- JSP support -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
@@ -51,6 +48,7 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>2.1.210</version>
+            <scope>runtime</scope>
         </dependency>
         <!-- Webjars bootstrap CSS dependencies -->
         <dependency>
@@ -69,6 +67,7 @@
     </dependencies>
 
     <build>
+        <finalName>dawClubSB</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
