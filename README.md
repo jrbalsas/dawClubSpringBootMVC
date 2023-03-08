@@ -23,7 +23,8 @@ Features:
 - JDK 17
 
 ## Usage
-- Compile and run
+- Command line: 
+  - ``mvn spring-boot:run``
 
 ### DB Access:
 1. Configure Spring Datasource in application.properties

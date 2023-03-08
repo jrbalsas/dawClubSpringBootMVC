@@ -5,6 +5,7 @@
     <groupId>com.daw</groupId>
     <artifactId>clubspringboot</artifactId>
     <version>1.0</version>
+    <!-- War packaging required for JSP support -->
     <packaging>war</packaging>
     
     <name>dawClubSpringBootMVC</name>
