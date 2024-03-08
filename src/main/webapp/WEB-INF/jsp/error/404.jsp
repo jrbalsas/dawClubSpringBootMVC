@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ taglib prefix="club" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="club" tagdir="/WEB-INF/tags/club" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,8 +10,8 @@
   <%@include file="/WEB-INF/layout/bootstrapheader.jspf"%>
 </head>
 <body class="container">
-<%@include file="/WEB-INF/layout/header.jspf" %>
+<club:cabecera-pagina/>
 <h1>Recurso no encontrado</h1>
-<%@include file="/WEB-INF/layout/footer.jspf"%>
+<club:pie-pagina/>
 </body>
 </html>

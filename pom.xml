@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.4</version>
+        <version>3.2.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -48,7 +48,6 @@
        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>2.1.210</version>
             <scope>runtime</scope>
         </dependency>
         <!-- Webjars bootstrap CSS dependencies -->
@@ -58,13 +57,18 @@
             <version>4.5.0</version>
         </dependency>
 
-        <!-- Required for IntelliJ 2022.3 JSTL tags autocomplete bug -->
+        <!-- Required for IntelliJ 2022.3 JSTL tags autocomplete bug and jstl fmt support -->
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>3.0.0</version>
-            <scope>provided</scope>
+            <version>3.0.1</version>
         </dependency>
+
     </dependencies>
 
     <build>
