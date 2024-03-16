@@ -19,7 +19,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.2</version>
+        <version>3.2.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -64,8 +64,9 @@
         <!-- Only for JEE Embedded IdentityStore usage-->
         <dependency>
             <groupId>org.glassfish.soteria</groupId>
-            <artifactId>javax.security.enterprise</artifactId>
-            <version>1.0</version>
+            <artifactId>jakarta.security.enterprise</artifactId>
+            <version>3.0.3</version>
+            <scope>provided</scope>
         </dependency>
 
        <dependency>
@@ -92,13 +93,14 @@
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
 
     </dependencies>
 
     <build>
+        <finalName>dawClubSB</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
