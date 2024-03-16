@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="c" uri="jakarta.tags.core"%>
+<%@ taglib prefix="club" tagdir="/WEB-INF/tags/club"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -9,13 +10,13 @@
         <%@include file="/WEB-INF/layout/bootstrapheader.jspf"%>
     </head> 
     <body class="container">
-        <%@include file="/WEB-INF/layout/header.jspf" %>
+    <club:cabecera-pagina/>
         <main class="row">
             <nav class="col-md-3">
                 <h2>Opciones</h2>
 
                 <ul class=" nav nav-pills flex-column">
-                    <li><%@include file="/WEB-INF/layout/logoutBt.jspf" %></li>
+                    <li><club:logout-button/></li>
 
                     <li class="nav-item"><a href='<c:url value="/clientes/crea"/>' class="nav-link">Nuevo Cliente</a></li>
                 </ul>
@@ -47,6 +48,6 @@
                 </c:if>
             </section>
         </main>
-        <%@include file="/WEB-INF/layout/footer.jspf"%>
+    <club:pie-pagina/>
     </body>
 </html>

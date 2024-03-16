@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="club" tagdir="/WEB-INF/tags/club"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -10,12 +11,12 @@
         <%@include file="/WEB-INF/layout/bootstrapheader.jspf"%>
     </head>
     <body class="container">
-        <%@include file="/WEB-INF/layout/header.jspf" %>
-                <main class="row">
+        <club:cabecera-pagina/>
+        <main class="row">
         <nav class="col-md-3">
             <h2>Opciones</h2>
             <ul class="nav nav-pills flex-column">
-                <li class="nav-item"><%@include file="/WEB-INF/layout/logoutBt.jspf" %></li>
+                <li class="nav-item"><club:logout-button/></li>
                 <li class="nav-item"><a class="nav-link" href="listado">Volver</a></li>
                 
             </ul>
@@ -52,6 +53,6 @@
         </form:form>
             </section>
                 </main>
-        <%@include file="/WEB-INF/layout/footer.jspf"%>
+        <club:pie-pagina/>
     </body>
 </html>

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 <%@taglib prefix="c" uri="jakarta.tags.core" %>
+<%@taglib prefix="club" tagdir="/WEB-INF/tags/club" %>
 <fmt:setBundle basename="messages"/>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,6 +26,6 @@
         <section class="col-md-9">
         </section>
         </main>
-        <%@include file="/WEB-INF/layout/footer.jspf"%>
+        <club:pie-pagina/>
     </body>
 </html>
