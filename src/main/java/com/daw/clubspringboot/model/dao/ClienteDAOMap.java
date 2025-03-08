@@ -11,15 +11,11 @@ import org.springframework.stereotype.Repository;
 @Repository("clienteDAOMap")
 public class ClienteDAOMap implements ClienteDAO, Serializable{
 
-    private  Map<Integer, Cliente> clientes=null;
+    private  Map<Integer, Cliente> clientes;
     private  Integer idCliente = 1;
 
     public ClienteDAOMap() {
         clientes = new HashMap<>();
-
-        clientes.put(idCliente, new Cliente(idCliente++, "Paco López", "11111111A", false));
-        clientes.put(idCliente, new Cliente(idCliente++, "María Jiménez", "22222222B", true));
-        clientes.put(idCliente, new Cliente(idCliente++, "Carlos García", "33333333C", true));
     }
     
     @Override
@@ -49,7 +45,7 @@ public class ClienteDAOMap implements ClienteDAO, Serializable{
         boolean result=false;
         if (clientes.containsKey(c.getId())) {
             Cliente nc=new Cliente(c);
-            clientes.replace(c.getId(),c);
+            clientes.replace(c.getId(),nc);
             result=true;
         }       
         return result;
