@@ -20,7 +20,7 @@ Features:
 
 ## Requeriments
 
-- JDK 17
+- JDK 21
 
 ## Usage
 - Command line: 
