@@ -17,7 +17,7 @@
             <h2>Opciones</h2>
             <ul class=" nav nav-pills flex-column">
                 <li class="nav-item"><club:logout-button/></li>
-                <li class="nav-item"><a href="listado" >Volver</a></li>
+                <li class="nav-item"><a href="listado" class="nav-link">Volver</a></li>
             </ul>
         </nav>        
             <section class="col-md-6">

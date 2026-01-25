@@ -1,21 +1,15 @@
 
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<c:set var="bootstrapbase" value="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0"/>   
+<!-- c:set var="bootstrapbase" value="//maxcdn.bootstrapcdn.com/bootstrap/5.3.8" /-->
 <%--! webjar CSS/JS dependencies --%>
-<c:url var="bootstrapbase" value="/webjars/bootstrap/4.5.0"/>   
-<c:url var="jquerybase" value="/webjars/jquery/3.5.1"/>   
+<c:url var="bootstrapbase" value="/webjars/bootstrap/5.3.8"/>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="${bootstrapbase}/css/bootstrap.min.css" >
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="${bootstrapbase}/css/bootstrap-theme.min.css" >
+<!-- Latest compiled and minified CSS (adapted for JSF use in webjar package) -->
+<link rel="stylesheet" href="${bootstrapbase}/css/bootstrap.min-jsf.css" >
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="${jquerybase}/jquery.min.js"> </script>
-
 <script src="${bootstrapbase}/js/bootstrap.min.js"> </script>

@@ -11,8 +11,8 @@
         <%@include file="/WEB-INF/layout/bootstrapheader.jspf"%>        
     </head>
     <body class="container">
-        <header class="jumbotron">
-            <h1>Club de Tenis</h1>
+        <header class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <h1 class="display-5 fw-bold"><img src="${pageContext.request.contextPath}/images/logo.png" class="me-3">Club de Tenis</h1>
         </header>     
         <main class="row" >
         <nav class="col-md-3">
