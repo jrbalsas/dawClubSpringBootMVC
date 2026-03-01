@@ -26,7 +26,7 @@ public class ClienteController {
     
     @Autowired
     //@Inject   //Spring Supports CDI compatible Dependency Injection
-    //@Qualifier("clienteDAOJPA") //avoid ambiguity with differents DAO implementations
+    //@Qualifier("clienteDAORepository") //avoid ambiguity with differents DAO implementations
     @Qualifier("clienteDAOMap")
     private ClienteDAO clienteDAO;
 

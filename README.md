@@ -9,7 +9,7 @@ Features:
 - Simple Entity CRUD JSP views
 - Uses SpringBoot for application bootstraping
 - Simple DAOMap for testing purpose
-- Sample DAOJpa and Spring JdbcTemplate implementations
+- Sample DAO with Spring Data Repository implementation
 - Uses Spring CDI with qualifiers for DAO selection
 - JEE Datasource definition in web.xml
 - SpringBoot JPA auto-configuration with JNDI datasource definition application.properties
@@ -31,8 +31,7 @@ Features:
 ### DB Access:
 1. Configure JEE Datasource in web.xml
 2. Uncomment SpringBoot DataSource JNDI location in application.properties
-3. Select JPA DAOs implementation in controller
-4. Optional: edit sample data on `src/main/resources`
+3. Select Spring Data Repository DAOs implementation in controller
 
 ### JEE Authentication/Authorization:
 1. Uncomment/Create Security-constraints in web.xml
