@@ -26,6 +26,7 @@ public class DawClubSpringBootMvcApplication  {
         SpringApplication.run(DawClubSpringBootMvcApplication.class, args);
     }
 
+    // Inject DAO implementation as parameter
     @Bean
     public CommandLineRunner initApp(@Qualifier("clienteDAOMap") ClienteDAO clienteDAO) {
         //execute code after the Spring application context has fully started but before the application itself begins running.
