@@ -22,8 +22,8 @@ Features:
 - JEE Security API Authentication
 
 ## Requeriments
-
-- Jakarta 10 Application Server, i.e. Payara, Glassfish
+- JDK 21
+- Jakarta 11 Application Server, i.e. Payara, Glassfish
 
 ## Usage
 - Compile and deploy in a Jakarta EE Application Server

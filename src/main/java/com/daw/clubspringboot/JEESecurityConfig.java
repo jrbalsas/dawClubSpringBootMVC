@@ -5,14 +5,14 @@ import jakarta.faces.annotation.FacesConfig;
 import jakarta.security.enterprise.authentication.mechanism.http.CustomFormAuthenticationMechanismDefinition;
 import jakarta.security.enterprise.authentication.mechanism.http.FormAuthenticationMechanismDefinition;
 import jakarta.security.enterprise.authentication.mechanism.http.LoginToContinue;
-import org.glassfish.soteria.identitystores.annotation.Credentials;
-import org.glassfish.soteria.identitystores.annotation.EmbeddedIdentityStoreDefinition;
+import jakarta.security.enterprise.identitystore.InMemoryIdentityStoreDefinition;
+import jakarta.security.enterprise.identitystore.InMemoryIdentityStoreDefinition.Credentials;
 
 /** JEE Security configuration
  *
  * @author jrbalsas
  */
-@EmbeddedIdentityStoreDefinition({
+@InMemoryIdentityStoreDefinition({
     @Credentials(callerName = "admin", password = "secret1", groups = {"ADMINISTRADORES"}),
     @Credentials(callerName = "user", password = "secret2", groups = {"USUARIOS"})
 })
